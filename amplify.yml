@@ -4,6 +4,9 @@ frontend:
     build:
       commands:
         - sed -i "s|YOUR_API_GATEWAY_ENDPOINT_HERE|${API_ENDPOINT}|g" index.html
+        - sed -i "s|YOUR_API_GATEWAY_ENDPOINT_HERE|${API_ENDPOINT}|g" js/scripts.js
+        - echo "API_ENDPOINT set to ${API_ENDPOINT}"
+        - grep -n "API_ENDPOINT" index.html js/scripts.js
   artifacts:
     baseDirectory: .
     files:
