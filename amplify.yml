@@ -5,10 +5,13 @@ frontend:
       commands:
         - sed -i "s|YOUR_API_GATEWAY_ENDPOINT_HERE|${API_ENDPOINT}|g" index.html
   artifacts:
-    baseDirectory: /
+    baseDirectory: .
     files:
       - index.html
-      - whiteboard.webp
+      - amplify.yml
+      - images/**/*
       - logos/**/*
+      - css/**/*
+      - js/**/*
   cache:
     paths: []
