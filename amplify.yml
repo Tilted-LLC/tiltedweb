@@ -1,0 +1,14 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - sed -i "s|YOUR_API_GATEWAY_ENDPOINT_HERE|${API_ENDPOINT}|g" index.html
+  artifacts:
+    baseDirectory: /
+    files:
+      - index.html
+      - whiteboard.webp
+      - logos/**/*
+  cache:
+    paths: []
