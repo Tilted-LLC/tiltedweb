@@ -9,14 +9,14 @@ frontend:
         - grep -n "API_ENDPOINT" index.html js/scripts.js
   artifacts:
     baseDirectory: .
-  files:
-    - index.html
-    - amplify.yml
-    - favicon.ico
-    - favicon-*.png
-    - images/**/*
-    - logos/**/*
-    - css/**/*
-    - js/**/*
+    files:
+      - index.html
+      - amplify.yml
+      - favicon.ico
+      - favicon-*.png
+      - images/**/*
+      - logos/**/*
+      - css/**/*
+      - js/**/*
   cache:
     paths: []
