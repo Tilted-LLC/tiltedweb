@@ -35,7 +35,12 @@
         timestamp: new Date().toISOString(),
         source: 'tiltedllc.com'
       };
-
+// If honeypot is filled, it's a bot — silently fail
+if (document.getElementById('honeypot').value !== '') {
+    btn.disabled = false;
+    text.textContent = '❯ Send message';
+    return;
+}
       try {
         const response = await fetch(API_ENDPOINT, {
           method: 'POST',
