@@ -521,6 +521,11 @@ body::after {
     opacity: 0.9;
   }
 
+  /* ── WHO WE WORK FOR ── */
+#who-we-work-for {
+  background: var(--navy-light);
+}
+
   /* ── CONTACT ── */
   #contact {
     background: var(--navy-mid);
