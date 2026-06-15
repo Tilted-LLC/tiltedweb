@@ -7,7 +7,9 @@ frontend:
         - sed -i "s|YOUR_API_GATEWAY_ENDPOINT_HERE|${API_ENDPOINT}|g" js/scripts.js
         - sed -i "s|YOUR_CONTACT_FORM_KEY_HERE|${CONTACT_FORM_KEY}|g" js/scripts.js
         - echo "API_ENDPOINT set to ${API_ENDPOINT}"
+        - echo "CONTACT_FORM_KEY set to ${CONTACT_FORM_KEY:+[set]}${CONTACT_FORM_KEY:-[empty]}"
         - grep -n "API_ENDPOINT" index.html js/scripts.js
+        - grep -n "CONTACT_FORM_KEY" js/scripts.js
   artifacts:
     baseDirectory: .
     files:
